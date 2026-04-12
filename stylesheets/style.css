@@ -1,0 +1,94 @@
+html, body {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+	font-family: 'Inter', sans-serif;
+    height: 100%;
+    justify-content: center;
+}
+
+body{
+     background-image: linear-gradient( 135deg, #FCCF31 10%, #F55555 100%);
+     
+}
+button{
+	background-color: white;
+	backdrop-filter: blur(1rem); 
+	border: 0.1rem solid rgba(255, 255, 255, 0.3); 
+	border-radius: 2rem;
+	color: #F55555;
+	font-weight: 700;
+    padding: 1rem;
+	transition: transform 0.3s ease-in-out;
+    -webkit-backdrop-filter: blur(1rem);
+	
+}
+button:focus{
+    background-color: rgba(255 255 255 / 0.9); 
+	color: rgba(245 85 85 / 0.8);
+	transform: scale(1.1);
+	
+}
+button:hover{
+    background-color: rgba(255 255 255 / 0.9); 
+	color: rgba(245 85 85 / 0.8);
+	transform: scale(1.2);
+	
+}
+form{
+	align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+h1, label{
+	color: rgba(255, 255, 255, 0.8);
+}
+p{
+	color: rgba(128 , 0, 32, 0.8);
+}
+
+input{
+    background-color: rgba(255 255 255 / 0.3); 
+    border: 0.1rem solid rgba(255 255 255 / 0.4);
+    border-radius: 1rem;
+    color: #fff;
+    backdrop-filter: blur(1rem);
+    transition: all 0.3s ease;
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    -webkit-backdrop-filter: blur(1rem);
+}
+input:focus{
+    box-shadow: 0.1rem 0.3rem 0.1rem 0.1rem rgba(0  0 0 / 0.5);
+}
+input:hover{
+    background-color: rgba(255 255 255 / 0.5);
+	transform: scale(1.1);
+}
+.login-form{
+    align-items: center;
+	background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(1.5rem); 
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+	border-radius: 1rem;
+	box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+	transition: transform 0.3s ease-in-out;
+    max-width: 40rem;
+    padding: 5rem;
+	-webkit-backdrop-filter: blur(1.5rem);
+}
+.login-form div {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.login-form:hover{
+	transform: scale(1.2);
+}
