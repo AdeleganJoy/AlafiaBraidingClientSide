@@ -1,4 +1,16 @@
-html, body {
+<!DOCTYPE html>
+    <html>
+        <head>
+            <link rel="stylesheet" href="stylesheets/style.css">
+            <script type="module" src="javascripts/dashboardScript.js" defer=""></script>
+        </head>
+        <body>
+            <h1>Dashboard</h1>
+            <div class="container-body">
+                <p id="error-message"></p>
+            </div>
+        <style>
+	html, body {
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -45,7 +57,7 @@ h1, label{
 	color: rgba(255, 255, 255, 0.8);
 }
 p{
-	color: rgba(245,85,85 0.8);
+	color: rgba(128 , 0, 32, 0.8);
 }
 
 input{
@@ -67,7 +79,7 @@ input:hover{
     background-color: rgba(255 255 255 / 0.5);
 	transform: scale(1.1);
 }
-.login-form{
+.container-body{
     align-items: center;
 	background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(1.5rem); 
@@ -83,12 +95,15 @@ input:hover{
     padding: 5rem;
 	-webkit-backdrop-filter: blur(1.5rem);
 }
-.login-form div {
+.container-body div {
     align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-.login-form:hover{
+.container-body:hover{
 	transform: scale(1.2);
 }
+	</style>
+        </body>
+    </html>

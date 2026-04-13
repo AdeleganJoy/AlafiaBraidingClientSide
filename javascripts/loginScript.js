@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.12.0/firebase-app.js";
-import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.12.0/firebase-auth.js";
+import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.12.0/firebase-auth.js";
 
 const form = document.querySelector('form');
 const error_message = document.getElementById("error-message");
@@ -21,6 +21,12 @@ const app = initializeApp(firebaseConfig);
 // Initialize auth
 const auth = getAuth(app);
 
+//Check if user is already logged in
+auth.onAuthStateChanged( (user) => {
+  if (user) {
+    window.location.replace("https://miniature-space-garbanzo-jpj699p7ggxf5v4p-5500.app.github.dev/dashboard.html");
+  } 
+});
 form.addEventListener('submit', async (e) => {
 	e.preventDefault(); 
 	error_message.textContent = "";
@@ -32,11 +38,10 @@ form.addEventListener('submit', async (e) => {
   const credential = await signInWithEmailAndPassword(auth, username, password);
   const user = credential.user;
 
-  const token = await user.getIdToken();
-
-  console.log("Token:", token);
+  window.location.replace("https://miniature-space-garbanzo-jpj699p7ggxf5v4p-5500.app.github.dev/dashboard.html");
   } 
   catch (error) {
     error_message.textContent = "Please enter a valid email address.";
   }
 });
+	
