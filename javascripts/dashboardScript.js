@@ -39,7 +39,7 @@ auth.onAuthStateChanged(async (user) => {
   error_message.textContent = "";
   if (!user) {
     error_message.textContent = "Unauthorized Access";
-    window.location.replace("https://miniature-space-garbanzo-jpj699p7ggxf5v4p-5501.app.github.dev");
+    window.location.replace("https://adeleganjoy.github.io/AlafiaBraidingClientSide");
     return; 
   } 
   // Get booking information if token is correct
@@ -62,7 +62,7 @@ auth.onAuthStateChanged(async (user) => {
     
   } catch (error) {
     error_message.textContent = "Unauthorized Access";
-    indow.location.replace("https://miniature-space-garbanzo-jpj699p7ggxf5v4p-5501.app.github.dev");
+    indow.location.replace("https://adeleganjoy.github.io/AlafiaBraidingClientSide");
   }
 }
 );
