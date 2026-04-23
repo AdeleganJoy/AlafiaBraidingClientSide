@@ -3,7 +3,6 @@ import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/
 
 let bookings = [];
 const back = document.getElementById('back');
-const error_message = document.getElementById("error-message");
 const forward = document.getElementById('forward');
 let index = 1;
 let len;
@@ -36,9 +35,7 @@ const auth = getAuth(app);
 
 //Check if user is already logged in
 auth.onAuthStateChanged(async (user) => {
-  error_message.textContent = "";
   if (!user) {
-    error_message.textContent = "Unauthorized Access";
     window.location.replace("https://adeleganjoy.github.io/AlafiaBraidingClientSide");
     return; 
   } 
@@ -61,7 +58,6 @@ auth.onAuthStateChanged(async (user) => {
     parseBookingData(bookings[index-1]);
     
   } catch (error) {
-    error_message.textContent = "Unauthorized Access";
     indow.location.replace("https://adeleganjoy.github.io/AlafiaBraidingClientSide");
   }
 }
