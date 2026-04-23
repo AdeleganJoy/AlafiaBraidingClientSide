@@ -24,7 +24,7 @@ const auth = getAuth(app);
 //Check if user is already logged in
 auth.onAuthStateChanged( (user) => {
   if (user) {
-    window.location.replace("https://miniature-space-garbanzo-jpj699p7ggxf5v4p-5500.app.github.dev/dashboard.html");
+    window.location.replace("https://miniature-space-garbanzo-jpj699p7ggxf5v4p-5501.app.github.dev/dashboard.html");
   } 
 });
 form.addEventListener('submit', async (e) => {
@@ -38,7 +38,7 @@ form.addEventListener('submit', async (e) => {
   const credential = await signInWithEmailAndPassword(auth, username, password);
   const user = credential.user;
 
-  window.location.replace("https://miniature-space-garbanzo-jpj699p7ggxf5v4p-5500.app.github.dev/dashboard.html");
+  window.location.replace("https://miniature-space-garbanzo-jpj699p7ggxf5v4p-5501.app.github.dev/dashboard.html");
   } 
   catch (error) {
     error_message.textContent = "Please enter a valid email address.";

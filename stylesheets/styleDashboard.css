@@ -1,0 +1,77 @@
+html {
+    height: 100%;
+}
+body{
+    background-image: linear-gradient( 135deg, #FCCF31 10%, #F55555 100%);
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+    justify-content: space-evenly;
+    gap: 1rem;
+    align-items: center;
+    height: 100%;
+    display: flex;
+    background-attachment: fixed;
+}
+button{
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(1.5rem); 
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+	border-radius: 10rem;
+	box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+    color: rgba(245 85 85 / 0.8);
+	transition: transform 0.3s ease-in-out;
+	-webkit-backdrop-filter: blur(1.5rem);
+	
+}
+button:hover{
+    background-color: rgba(255 255 255 / 0.9); 
+	color: rgba(128 , 0, 32, 0.8);
+	transform: scale(1.2);
+	
+}
+h1,h2, label{
+	color: rgba(255, 255, 255, 0.8);
+}
+li, p{
+    color: rgba(128 , 0, 32, 0.8);
+}
+#img-container{
+    overflow: hidden;
+}
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+main{
+    display: grid;
+	grid-template-columns: minmax(0, 1fr) auto;
+    padding: 30px;
+	height: 100vh;
+    gap: 50px;
+    color: rgba(245 85 85 / 0.8);
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: space-evenly;
+    gap: 0.5rem;
+}
+nav input{
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(1.5rem); 
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+	border-radius: 1rem;
+	box-shadow: 0 0.8rem 3.2rem 0 rgba(0, 0, 0, 0.2);
+    color: rgba(128 , 0, 32, 0.8);
+}
+
+@media (max-width: 800px) {
+    main{
+    display: grid;
+    grid-template-rows: 100% auto; 
+    grid-template-columns: 1fr;
+    text-align: center;
+}
+}
